@@ -1,0 +1,93 @@
+Questao 2:
+
+modelo LampadaTresEstados
+inicio do modelo
+
+    dado estadoDaLampada; //ligada ou nao
+
+    operacao acende() //acende a lampada
+        inicio
+            estadoDaLampada = aceso;
+        fim
+    
+    operacao meia-luz() //lampada meia-luz
+        inicio
+            estadoDaLampada = meia-luz;
+        fim
+
+    operacao apaga() //apaga a lampada
+        inicio
+            estadoDaLampada = apagado;
+        fim
+
+    operacao mostraEstado() //mostra o estado
+        inicio
+            se (estadoDaLampada == aceso)
+                imprime "A lampada esta acesa"
+            se (estadoDaLampada == meia-luz)
+                imprime "A lampada esta meia-luz"
+            senao
+                imprime "A lampada esta apagada"
+        fim
+
+fim do modelo
+
+
+Questao 3:
+
+modelo LampadaLuminosidade
+inicio do modelo
+
+    dado luminosidadeLampada; //0% (apagada) a 100% da luminosidade
+
+    operacao recebeLuz() //recebe o valor da luminosidade da lampada
+        inicio
+            luminosidadeDaLampada = porcentualLuz;
+        fim
+
+    operacao mostraEstado() //mostra o estado
+        inicio
+            se (luminosidadeDaLampada == 0)
+                imprime "A lampada esta apagada"
+            senao
+                imprime "A lampada esta com" + porcentualLuz + "% da sua luminosidade"
+        fim
+
+fim do modelo
+
+Questao 12:
+
+modelo Ponto2d
+
+  inicio do modelo
+   dado x,y
+   dado A, a,b,c
+   dado Aretangulo
+
+       operação defineQuadrante()
+          se x>=0 e y>=0
+             imprime "quadrante 1"
+          senao
+             imprime "quadrante 4"
+          se x<=0 e y>=0
+             imprime "quadrante 2"
+          senao
+             imprime "quadrante 3"
+         fim
+
+        operaçãoDistancia()
+           a^2 = b^2+ c^2 //calcula a distância
+              imprime a^2
+           A= π*a^2; // calcula a area da circunferencia;
+              imprime A
+         fim
+
+        operaçãoRetangulo
+           calcula Aretangulo= x*y
+             se Aretangulo<0 
+                calcula Aretangulo * -1
+             senao
+                imprime Aretangulo
+   	fim
+
+fim do modelo
